@@ -1,0 +1,20 @@
+services:
+  navidrome:
+    container_name: navidrome
+    image: deluan/navidrome:latest
+    restart: unless-stopped
+    ports:
+      - 4533:4533  # Navidrome web UI port
+    volumes:
+      - ./data:/data  # Navidrome data (config, music library)
+      - ./music:/music  # Your music files
+    environment:
+      - TZ=Europe/YourCity  # Set your timezone
+      - PUID=1000  # User ID for permission handling
+      - PGID=1000  # Group ID for permission handling
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge

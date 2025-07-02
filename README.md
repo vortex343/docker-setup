@@ -1,24 +1,38 @@
 # My Personal Docker Setup
-This is my personal docker setup for my Server, using docker compose files.
 
-Needed environment variables are in the `.env` subsection.
+This repository contains my personal Docker setup for my server using Docker Compose files.
 
-## Cloudflared
-The tunnel connector for Cloudflare
+Sensitive environment variables are stored in `.env` files located in their respective service directories.
 
-### .env
-```
+---
+
+## Services
+
+### Cloudflared
+
+Cloudflare Tunnel connector.
+
+#### Environment Variables (`.env`)
+
+```env
 TUNNEL_TOKEN=
 ```
 
-## Navidrome
-Self hosted music streaming service.
+---
 
-## Nextcloud
-Self hosted Cloud and general purpose Service
+### Navidrome
 
-### .env
-```
+Self-hosted music streaming service.
+
+---
+
+### Nextcloud
+
+Self-hosted cloud and general-purpose service.
+
+#### Environment Variables (`.env`)
+
+```env
 MYSQL_PASSWORD=
 MYSQL_DATABASE=
 MYSQL_USER=
@@ -26,16 +40,21 @@ NEXTCLOUD_ADMIN_USER=
 NEXTCLOUD_ADMIN_PASSWORD=
 ```
 
-## startup WIP
-nginx webserver i use as my startup and new page in the browser
+---
 
+### Startup (WIP)
 
-## Twingate
-Connector for twingate.
-Twingate is a zero-trust VPN alternative for secure remote access.
+Nginx web server I use as my startup and new tab page in the browser.
 
-### .env
-```
+---
+
+### Twingate
+
+Connector for Twingate — a zero-trust VPN alternative for secure remote access.
+
+#### Environment Variables (`.env`)
+
+```env
 TWINGATE_NETWORK=
 TWINGATE_ACCESS_TOKEN=
 TWINGATE_REFRESH_TOKEN=
@@ -43,15 +62,34 @@ TWINGATE_LOG_ANALYTICS=
 TWINGATE_LOG_LEVEL=
 ```
 
-## website WIP
-nginx webserver for my personal website
+---
 
-Currently not online
+### Website (WIP)
 
-## update.sh 
-Bash script to update all containers
+Nginx web server for my personal website.
+*Currently not online.*
 
-# Setup
-- Install docker and docker compose with all dependencies
-- if `.env` is needed, use `sudo docker compose --env-file .env up -d` in each directory 
-- else use `docker compose up -d` 
+---
+
+## update.sh
+
+Bash script to update all Docker containers.
+
+---
+
+## Setup Instructions
+
+1. Install Docker and Docker Compose with all dependencies.
+2. If a service requires environment variables, start it with:
+
+```bash
+sudo docker compose --env-file .env up -d
+```
+
+Run this command in the respective service directory.
+
+3. For services that do not require a `.env` file, simply run:
+
+```bash
+docker compose up -d
+```

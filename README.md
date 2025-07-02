@@ -1,6 +1,7 @@
 # My Personal Docker Setup
 This is my personal docker setup for my Server, using docker compose files.
-needed environment variables are in the `.env` subsection.
+
+Needed environment variables are in the `.env` subsection.
 
 ## Cloudflared
 The tunnel connector for Cloudflare
@@ -25,9 +26,9 @@ NEXTCLOUD_ADMIN_USER=
 NEXTCLOUD_ADMIN_PASSWORD=
 ```
 
-## startup
+## startup WIP
 nginx webserver i use as my startup and new page in the browser
-WIP
+
 
 ## Twingate
 Connector for twingate.
@@ -42,9 +43,15 @@ TWINGATE_LOG_ANALYTICS=
 TWINGATE_LOG_LEVEL=
 ```
 
-## website
+## website WIP
 nginx webserver for my personal website
-WIP and currently not online
+
+Currently not online
 
 ## update.sh 
-bash script to update all containers
+Bash script to update all containers
+
+# Setup
+- Install docker and docker compose with all dependencies
+- if `.env` is needed, use `sudo docker compose --env-file .env up -d` in each directory 
+- else use `docker compose up -d` 

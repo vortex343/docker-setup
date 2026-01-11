@@ -1,3 +1,5 @@
 navidrome/data/*
 navidrome/music/*
+kavita/data/*
+kavita/config/*
 */.env

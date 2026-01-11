@@ -17,6 +17,12 @@ Cloudflare Tunnel connector.
 ```env
 TUNNEL_TOKEN=
 ```
+---
+
+### Kavita
+
+Self-hosted ebook service.
+
 
 ---
 
@@ -42,12 +48,6 @@ NEXTCLOUD_ADMIN_PASSWORD=
 
 ---
 
-### Startup (WIP)
-
-Nginx web server I use as my startup and new tab page in the browser.
-
----
-
 ### Twingate
 
 Connector for Twingate — a zero-trust VPN alternative for secure remote access.
@@ -64,18 +64,6 @@ TWINGATE_LOG_LEVEL=
 
 ---
 
-### Website (WIP)
-
-Nginx web server for my personal website.
-*Currently not online.*
-
----
-
-## update.sh
-
-Bash script to update all Docker containers.
-
----
 
 ## Setup Instructions
 
